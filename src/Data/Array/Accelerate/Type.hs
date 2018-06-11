@@ -87,6 +87,7 @@ import Data.Typeable
 import Data.Word
 import GHC.TypeLits
 import Language.Haskell.TH
+import Language.Haskell.TH.Syntax (Lift)
 import Numeric.Half
 import Text.Printf
 import Foreign.Storable
