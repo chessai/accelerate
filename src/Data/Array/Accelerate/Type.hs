@@ -1,8 +1,10 @@
 {-# LANGUAGE ConstraintKinds      #-}
 {-# LANGUAGE DataKinds            #-}
 {-# LANGUAGE DeriveDataTypeable   #-}
+{-# LANGUAGE DeriveLift           #-}
 {-# LANGUAGE FlexibleInstances    #-}
 {-# LANGUAGE GADTs                #-}
+{-# LANGUAGE StandaloneDeriving   #-}
 {-# LANGUAGE TemplateHaskell      #-}
 {-# LANGUAGE TypeFamilies         #-}
 {-# LANGUAGE TypeOperators        #-}
@@ -90,7 +92,6 @@ import Text.Printf
 import Foreign.Storable
 import Foreign.C.Types
     (CChar, CSChar, CUChar, CShort, CUShort, CInt, CUInt, CLong, CULong, CLLong, CULLong, CFloat, CDouble)
-
 
 -- Scalar types
 -- ------------
@@ -537,4 +538,7 @@ $( runQ $ do
   --
   return (concat is ++ concat fs ++ concat ns ++ concat vs)
  )
+
+deriving instance Lift Half
+deriving instance Lift CUShort
 
