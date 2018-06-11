@@ -92,7 +92,7 @@ import Numeric.Half
 import Text.Printf
 import Foreign.Storable
 import Foreign.C.Types
-    (CChar, CSChar, CUChar, CShort, CUShort, CInt, CUInt, CLong, CULong, CLLong, CULLong, CFloat, CDouble)
+    (CChar, CSChar, CUChar, CShort, CUShort(..), CInt, CUInt, CLong, CULong, CLLong, CULLong, CFloat, CDouble)
 
 -- Scalar types
 -- ------------
